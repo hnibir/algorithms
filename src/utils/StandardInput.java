@@ -5,7 +5,7 @@ import java.util.Locale;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-public class StandarInput {
+public class StandardInput {
     // assume Unicode UTF-8 encoding
     private static final String CHARSET_NAME = "UTF-8";
     // assume language = English, country = US for consistency with System.out.
@@ -17,7 +17,7 @@ public class StandarInput {
         initializeScanner();
     }
 
-    public StandarInput() {
+    public StandardInput() {
 
     }
 

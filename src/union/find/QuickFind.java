@@ -1,6 +1,6 @@
 package union.find;
 
-import utils.StandarInput;
+import utils.StandardInput;
 
 public class QuickFind {
 
@@ -8,8 +8,12 @@ public class QuickFind {
     private int count;
 
     public QuickFind(int n) {
+        initialize(n);
+    }
+
+    private void initialize(int n) {
         if(n <= 0) {
-            throw new IllegalArgumentException("Argument must a positive integer number");
+            throw new IllegalArgumentException("Argument must be a positive integer number");
         }
 
         count = n;
@@ -58,11 +62,11 @@ public class QuickFind {
     }
 
     public static void main(String[] args) {
-        int n = StandarInput.readInt();
+        int n = StandardInput.readInt();
         QuickFind quickFind = new QuickFind(n);
-        while (!StandarInput.isEmpty()) {
-            int p = StandarInput.readInt();
-            int q = StandarInput.readInt();
+        while (!StandardInput.isEmpty()) {
+            int p = StandardInput.readInt();
+            int q = StandardInput.readInt();
             if(quickFind.find(p) == quickFind.find(q)) continue;
             quickFind.union(p, q);
             System.out.println(p + " " + q);
